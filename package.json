@@ -9,15 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.1.0",
-    "@mui/icons-material": "^6.1.8",
-    "@mui/material": "^6.1.8",
-    "@mui/styled-engine-sc": "^6.1.8",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "@mui/icons-material": "^5.14.20",
+    "@mui/material": "^5.14.20",
+    "next": "^14.2.18",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
