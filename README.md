@@ -1,3 +1,5 @@
+[🇬🇧 English (Current)](README.md) | [🇮🇷 فارسی](README.fa.md)
+
 # Minimal R&D Portfolio
 
 A lightweight, zero‑configuration Next.js site that serves as a base for quick research and product demos.
@@ -48,6 +50,18 @@ npx serve out
 ```
 
 > The site ships to a static `out/` directory; any hosting provider that serves static assets will work.
+
+## 🛠️ Customizing Your Portfolio
+You do **not** need to modify any application source code to personalize this portfolio. All content — profile, education, experience, skills, projects, research, publications, and contact details — lives in a single data file:
+
+`src/data/portfolio-data.ts`
+
+Edit this file to update your information. The application automatically reflects your changes.
+
+> **Future improvement:** An admin interface is planned, which will make managing and updating your portfolio content even easier without manually editing the data file.
+
+For a detailed guide on the file structure and how to customize each section, see:
+[📖 Data Management Manual](Manual/English/Data-Management.md)
 
 ## 📄 Licencing
 This repository is available under the **Apache 2.0** licence – feel free to copy, remix, or embed.
