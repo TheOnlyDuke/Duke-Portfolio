@@ -2,27 +2,38 @@
   "name": "duke-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Mahdi Abbasi (Duke) — personal site and portfolio",
+  "homepage": "https://github.com/TheOnlyDuke/Duke-Portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/TheOnlyDuke/Duke-Portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOnlyDuke/Duke-Portfolio.git"
+  },
+  "license": "ISC",
+  "author": "Mahdi Abbasi",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.1.0",
-    "@mui/icons-material": "^5.14.20",
-    "@mui/material": "^5.14.20",
-    "next": "^14.2.18",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^6.1.13"
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.3.0",
+    "@mui/icons-material": "^9.4.0",
+    "@mui/material": "^9.4.0",
+    "@mui/material-nextjs": "^9.4.0",
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^16.3.3",
+    "typescript": "^5.9.3"
   }
 }

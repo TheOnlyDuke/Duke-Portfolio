@@ -1,0 +1,127 @@
+.entry {
+  display: flex;
+  gap: var(--space-4);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .entry { gap: var(--space-6); }
+}
+
+.marker {
+  flex-shrink: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.marker::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: linear-gradient(180deg, var(--color-border), transparent);
+}
+
+.last .marker::before { display: none; }
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  color: var(--icon-color);
+  z-index: 1;
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding-top: var(--space-1);
+}
+
+@media (min-width: 768px) {
+  .content { padding-top: 0; }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .header { flex-direction: row; align-items: baseline; justify-content: space-between; }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.period {
+  font-size: var(--size-xs);
+  font-weight: 500;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.org {
+  font-size: var(--size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.role {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--size-md);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+}
+
+.summary {
+  font-size: var(--size-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.highlight {
+  font-size: var(--size-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 0.6;
+}

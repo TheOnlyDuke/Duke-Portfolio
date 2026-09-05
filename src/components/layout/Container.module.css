@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: var(--layout-content-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--space-12); }
+}
+
+@media (min-width: 1280px) {
+  .container { padding-inline: var(--space-14); }
+}
+
+.narrow {
+  max-width: var(--layout-content-narrow);
+}
+
+.wide {
+  max-width: var(--layout-content-wide);
+}

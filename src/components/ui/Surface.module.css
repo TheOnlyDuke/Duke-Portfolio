@@ -1,0 +1,11 @@
+.surface {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--motion-base), box-shadow var(--motion-base);
+}
+
+.surface:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}

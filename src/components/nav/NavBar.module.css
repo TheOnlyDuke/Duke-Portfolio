@@ -1,0 +1,113 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--motion-base), border-color var(--motion-base), box-shadow var(--motion-base);
+}
+
+.scrolled {
+  background-color: rgba(5, 6, 8, 0.88);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: var(--layout-content-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .inner { padding-inline: var(--space-12); }
+}
+
+@media (min-width: 1280px) {
+  .inner { padding-inline: var(--space-14); }
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--size-xl);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.navDesktop {
+  display: none;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .navDesktop { display: flex; }
+}
+
+.navLink {
+  font-size: var(--size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  position: relative;
+  transition: color var(--motion-fast);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+  transition: width var(--motion-base);
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+}
+
+.navLink:hover::after { width: 100%; }
+
+.navLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.mobileToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: border-color var(--motion-base), background-color var(--motion-base);
+}
+
+@media (min-width: 768px) {
+  .mobileToggle { display: none; }
+}
+
+.mobileToggle:hover {
+  border-color: var(--color-border-strong);
+  background-color: var(--color-bg-elevated);
+}
+
+.mobileToggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

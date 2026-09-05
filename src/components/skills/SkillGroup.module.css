@@ -1,0 +1,21 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

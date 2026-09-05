@@ -1,0 +1,118 @@
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.emailCard {
+  display: flex;
+}
+
+.emailInner {
+  display: flex;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.emailLabel {
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-1);
+}
+
+.emailAddress {
+  display: inline-block;
+  font-size: var(--size-lg);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-bottom: var(--space-1);
+  transition: color var(--motion-fast);
+}
+
+.emailAddress:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.emailNote {
+  font-size: var(--size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.socialCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialTitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--size-md);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: color var(--motion-fast), border-color var(--motion-fast), background-color var(--motion-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.noteCard {
+  background: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 70%), var(--color-bg-surface);
+  border-color: var(--color-border-accent);
+}
+
+.noteText {
+  font-size: var(--size-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  text-align: center;
+}

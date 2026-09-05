@@ -1,0 +1,120 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(14, 184, 166, 0.06) 0%, transparent 60%),
+    var(--color-bg-base);
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, var(--color-bg-base) 100%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--layout-content-max);
+  padding-inline: var(--space-6);
+  padding-block: var(--space-14);
+}
+
+@media (min-width: 768px) {
+  .content { padding-inline: var(--space-12); }
+}
+
+@media (min-width: 1280px) {
+  .content { padding-inline: var(--space-14); }
+}
+
+.inner {
+  text-align: center;
+  max-width: var(--layout-content-narrow);
+  margin-inline: auto;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--size-5xl);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .name { font-size: var(--size-6xl); }
+}
+
+.tagline {
+  font-size: var(--size-xl);
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .tagline { font-size: var(--size-2xl); }
+}
+
+.focus {
+  font-size: var(--size-base);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-8);
+  max-width: var(--layout-content-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .focus { font-size: var(--size-md); }
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .cta { gap: var(--space-5); }
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-text-tertiary);
+  animation: bounce 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-8px); }
+  60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollHint { animation: none; }
+}

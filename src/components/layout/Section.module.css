@@ -1,0 +1,16 @@
+.section {
+  padding-block: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .section { padding-block: var(--space-13); }
+}
+
+.noPadding {
+  padding-block: 0;
+}
+
+.narrow {
+  max-width: var(--layout-content-narrow);
+  margin-inline: auto;
+}
